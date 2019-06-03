@@ -10,7 +10,6 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2019-05-18T15:51:37.411-07:00
 # !
 # !
 # ! Installation:
@@ -298,6 +297,8 @@ case $state in
     # Operations
     _values "Operations" \
             "compareDocumentDocx[Compare Two Word DOCX]"             "convertDataCsvToJson[CSV to JSON conversion]" \
+            "convertDataXlsToJson[Excel (97-2003) XLS to JSON conversion]" \
+            "convertDataXlsxToJson[Excel XLSX to JSON conversion]" \
             "convertDataXmlToJson[XML to JSON conversion]"             "convertDocumentAutodetectGetInfo[Get document type information]" \
             "convertDocumentAutodetectToPdf[Convert Document to PDF]" \
             "convertDocumentCsvToXlsx[CSV to Excel XLSX]" \
@@ -357,6 +358,18 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       convertDataCsvToJson)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXlsToJson)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXlsxToJson)
         local -a _op_arguments
         _op_arguments=(
                               )

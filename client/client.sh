@@ -8,7 +8,6 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2019-05-18T15:51:37.411-07:00
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -99,6 +98,8 @@ declare -A operation_parameters_minimum_occurrences
 operation_parameters_minimum_occurrences["compareDocumentDocx:::inputFile1"]=1
 operation_parameters_minimum_occurrences["compareDocumentDocx:::inputFile2"]=1
 operation_parameters_minimum_occurrences["convertDataCsvToJson:::inputFile"]=1
+operation_parameters_minimum_occurrences["convertDataXlsToJson:::inputFile"]=1
+operation_parameters_minimum_occurrences["convertDataXlsxToJson:::inputFile"]=1
 operation_parameters_minimum_occurrences["convertDataXmlToJson:::inputFile"]=1
 operation_parameters_minimum_occurrences["convertDocumentAutodetectGetInfo:::inputFile"]=1
 operation_parameters_minimum_occurrences["convertDocumentAutodetectToPdf:::inputFile"]=1
@@ -170,6 +171,8 @@ declare -A operation_parameters_maximum_occurrences
 operation_parameters_maximum_occurrences["compareDocumentDocx:::inputFile1"]=0
 operation_parameters_maximum_occurrences["compareDocumentDocx:::inputFile2"]=0
 operation_parameters_maximum_occurrences["convertDataCsvToJson:::inputFile"]=0
+operation_parameters_maximum_occurrences["convertDataXlsToJson:::inputFile"]=0
+operation_parameters_maximum_occurrences["convertDataXlsxToJson:::inputFile"]=0
 operation_parameters_maximum_occurrences["convertDataXmlToJson:::inputFile"]=0
 operation_parameters_maximum_occurrences["convertDocumentAutodetectGetInfo:::inputFile"]=0
 operation_parameters_maximum_occurrences["convertDocumentAutodetectToPdf:::inputFile"]=0
@@ -238,6 +241,8 @@ declare -A operation_parameters_collection_type
 operation_parameters_collection_type["compareDocumentDocx:::inputFile1"]=""
 operation_parameters_collection_type["compareDocumentDocx:::inputFile2"]=""
 operation_parameters_collection_type["convertDataCsvToJson:::inputFile"]=""
+operation_parameters_collection_type["convertDataXlsToJson:::inputFile"]=""
+operation_parameters_collection_type["convertDataXlsxToJson:::inputFile"]=""
 operation_parameters_collection_type["convertDataXmlToJson:::inputFile"]=""
 operation_parameters_collection_type["convertDocumentAutodetectGetInfo:::inputFile"]=""
 operation_parameters_collection_type["convertDocumentAutodetectToPdf:::inputFile"]=""
@@ -686,6 +691,8 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[convertData]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}convertDataCsvToJson${OFF};CSV to JSON conversion (AUTH)
+  ${CYAN}convertDataXlsToJson${OFF};Excel (97-2003) XLS to JSON conversion (AUTH)
+  ${CYAN}convertDataXlsxToJson${OFF};Excel XLSX to JSON conversion (AUTH)
   ${CYAN}convertDataXmlToJson${OFF};XML to JSON conversion (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -860,6 +867,40 @@ print_convertDataCsvToJson_help() {
     echo -e "${BOLD}${WHITE}convertDataCsvToJson - CSV to JSON conversion${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Convert a CSV file to a JSON object array" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for convertDataXlsToJson operation
+#
+##############################################################################
+print_convertDataXlsToJson_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}convertDataXlsToJson - Excel (97-2003) XLS to JSON conversion${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Convert an Excel (97-2003) XLS file to a JSON object array" | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;OK${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for convertDataXlsxToJson operation
+#
+##############################################################################
+print_convertDataXlsxToJson_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}convertDataXlsxToJson - Excel XLSX to JSON conversion${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Convert an Excel XLSX file to a JSON object array" | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo ""
@@ -1895,6 +1936,78 @@ call_convertDataCsvToJson() {
     local path
 
     if ! path=$(build_request_path "/convert/csv/to/json" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call convertDataXlsToJson operation
+#
+##############################################################################
+call_convertDataXlsToJson() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/convert/xls/to/json" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call convertDataXlsxToJson operation
+#
+##############################################################################
+call_convertDataXlsxToJson() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/convert/xlsx/to/json" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5124,6 +5237,12 @@ case $key in
     convertDataCsvToJson)
     operation="convertDataCsvToJson"
     ;;
+    convertDataXlsToJson)
+    operation="convertDataXlsToJson"
+    ;;
+    convertDataXlsxToJson)
+    operation="convertDataXlsxToJson"
+    ;;
     convertDataXmlToJson)
     operation="convertDataXmlToJson"
     ;;
@@ -5375,6 +5494,12 @@ case $operation in
     ;;
     convertDataCsvToJson)
     call_convertDataCsvToJson
+    ;;
+    convertDataXlsToJson)
+    call_convertDataXlsToJson
+    ;;
+    convertDataXlsxToJson)
+    call_convertDataXlsxToJson
     ;;
     convertDataXmlToJson)
     call_convertDataXmlToJson

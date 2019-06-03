@@ -8,7 +8,6 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2019-05-18T15:51:37.411-07:00
 # !
 # !
 # ! System wide installation:
@@ -71,6 +70,8 @@ _()
     declare -A operations
     operations["compareDocumentDocx"]=1
     operations["convertDataCsvToJson"]=1
+    operations["convertDataXlsToJson"]=1
+    operations["convertDataXlsxToJson"]=1
     operations["convertDataXmlToJson"]=1
     operations["convertDocumentAutodetectGetInfo"]=1
     operations["convertDocumentAutodetectToPdf"]=1
@@ -131,6 +132,8 @@ _()
     declare -A operation_parameters
     operation_parameters["compareDocumentDocx"]=""
     operation_parameters["convertDataCsvToJson"]=""
+    operation_parameters["convertDataXlsToJson"]=""
+    operation_parameters["convertDataXlsxToJson"]=""
     operation_parameters["convertDataXmlToJson"]=""
     operation_parameters["convertDocumentAutodetectGetInfo"]=""
     operation_parameters["convertDocumentAutodetectToPdf"]=""
