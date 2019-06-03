@@ -342,7 +342,7 @@ header_accept=""
 
 ##
 # The provided Content-type header value
-header_content_type=""
+header_content_type="application/json"
 
 ##
 # If there is any body content on the stdin pass it to the body of the request
