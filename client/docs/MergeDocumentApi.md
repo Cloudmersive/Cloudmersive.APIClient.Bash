@@ -17,7 +17,7 @@ Combine multiple Office Word Documents (docx) into one single Office Word docume
 
 ### Example
 ```bash
- mergeDocumentDocx
+cloudmersive-cli mergeDocumentDocx
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ Combine multiple Office PowerPoint presentations (pptx) into one single Office P
 
 ### Example
 ```bash
- mergeDocumentPptx
+cloudmersive-cli mergeDocumentPptx
 ```
 
 ### Parameters
@@ -83,7 +83,7 @@ Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spr
 
 ### Example
 ```bash
- mergeDocumentXlsx
+cloudmersive-cli mergeDocumentXlsx
 ```
 
 ### Parameters

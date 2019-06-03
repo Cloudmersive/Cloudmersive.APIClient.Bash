@@ -28,7 +28,7 @@ Auto-detects a document's type information; does not require file extension.  An
 
 ### Example
 ```bash
- convertDocumentAutodetectGetInfo
+cloudmersive-cli convertDocumentAutodetectGetInfo
 ```
 
 ### Parameters
@@ -60,7 +60,7 @@ Automatically detect file type and convert it to PDF.
 
 ### Example
 ```bash
- convertDocumentAutodetectToPdf
+cloudmersive-cli convertDocumentAutodetectToPdf
 ```
 
 ### Parameters
@@ -92,7 +92,7 @@ Convert CSV file to Office Excel XLSX Workbooks file format.
 
 ### Example
 ```bash
- convertDocumentCsvToXlsx
+cloudmersive-cli convertDocumentCsvToXlsx
 ```
 
 ### Parameters
@@ -124,7 +124,7 @@ Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX 
 
 ### Example
 ```bash
- convertDocumentDocToDocx
+cloudmersive-cli convertDocumentDocToDocx
 ```
 
 ### Parameters
@@ -156,7 +156,7 @@ Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
 
 ### Example
 ```bash
- convertDocumentDocToPdf
+cloudmersive-cli convertDocumentDocToPdf
 ```
 
 ### Parameters
@@ -188,7 +188,7 @@ Convert Office Word Documents (docx) to standard PDF
 
 ### Example
 ```bash
- convertDocumentDocxToPdf
+cloudmersive-cli convertDocumentDocxToPdf
 ```
 
 ### Parameters
@@ -220,7 +220,7 @@ Convert PDF document to PNG array, one image per page.
 
 ### Example
 ```bash
- convertDocumentPdfToPngArray
+cloudmersive-cli convertDocumentPdfToPngArray
 ```
 
 ### Parameters
@@ -252,7 +252,7 @@ Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
 
 ### Example
 ```bash
- convertDocumentPptToPdf
+cloudmersive-cli convertDocumentPptToPdf
 ```
 
 ### Parameters
@@ -284,7 +284,7 @@ Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
 
 ### Example
 ```bash
- convertDocumentPptToPptx
+cloudmersive-cli convertDocumentPptToPptx
 ```
 
 ### Parameters
@@ -316,7 +316,7 @@ Convert Office PowerPoint Documents (pptx) to standard PDF
 
 ### Example
 ```bash
- convertDocumentPptxToPdf
+cloudmersive-cli convertDocumentPptxToPdf
 ```
 
 ### Parameters
@@ -348,7 +348,7 @@ Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all wo
 
 ### Example
 ```bash
- convertDocumentXlsToPdf
+cloudmersive-cli convertDocumentXlsToPdf
 ```
 
 ### Parameters
@@ -380,7 +380,7 @@ Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
 
 ### Example
 ```bash
- convertDocumentXlsToXlsx
+cloudmersive-cli convertDocumentXlsToXlsx
 ```
 
 ### Parameters
@@ -412,7 +412,7 @@ Convert Office Excel Workbooks (xlsx) to standard Comma-Separated Values (CSV) f
 
 ### Example
 ```bash
- convertDocumentXlsxToCsv
+cloudmersive-cli convertDocumentXlsxToCsv
 ```
 
 ### Parameters
@@ -444,7 +444,7 @@ Convert Office Excel Workbooks (xlsx) to standard PDF.  Converts all worksheets 
 
 ### Example
 ```bash
- convertDocumentXlsxToPdf
+cloudmersive-cli convertDocumentXlsxToPdf
 ```
 
 ### Parameters

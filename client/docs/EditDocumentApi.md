@@ -37,7 +37,7 @@ Uploads a document to Cloudmersive to begin a series of one or more editing oper
 
 ### Example
 ```bash
- editDocumentBeginEditing
+cloudmersive-cli editDocumentBeginEditing
 ```
 
 ### Parameters
@@ -69,7 +69,7 @@ Returns the body defined in the Word Document (DOCX) format file; this is the ma
 
 ### Example
 ```bash
- editDocumentDocxBody
+cloudmersive-cli editDocumentDocxBody
 ```
 
 ### Parameters
@@ -101,7 +101,7 @@ Returns the footer content from a Word Document (DOCX) format file
 
 ### Example
 ```bash
- editDocumentDocxGetHeadersAndFooters
+cloudmersive-cli editDocumentDocxGetHeadersAndFooters
 ```
 
 ### Parameters
@@ -133,7 +133,7 @@ Returns the images defined in the Word Document (DOCX) format file
 
 ### Example
 ```bash
- editDocumentDocxGetImages
+cloudmersive-cli editDocumentDocxGetImages
 ```
 
 ### Parameters
@@ -165,7 +165,7 @@ Returns the sections defined in the Word Document (DOCX) format file
 
 ### Example
 ```bash
- editDocumentDocxGetSections
+cloudmersive-cli editDocumentDocxGetSections
 ```
 
 ### Parameters
@@ -197,7 +197,7 @@ Returns the styles defined in the Word Document (DOCX) format file
 
 ### Example
 ```bash
- editDocumentDocxGetStyles
+cloudmersive-cli editDocumentDocxGetStyles
 ```
 
 ### Parameters
@@ -229,7 +229,7 @@ Returns all the table objects in an Office Word Document (docx)
 
 ### Example
 ```bash
- editDocumentDocxGetTables
+cloudmersive-cli editDocumentDocxGetTables
 ```
 
 ### Parameters
@@ -261,7 +261,7 @@ Set the footer in a Word Document (DOCX)
 
 ### Example
 ```bash
- editDocumentDocxInsertImage
+cloudmersive-cli editDocumentDocxInsertImage
 ```
 
 ### Parameters
@@ -293,7 +293,7 @@ Adds a new paragraph into a DOCX and returns the result.  You can insert at the 
 
 ### Example
 ```bash
- editDocumentDocxInsertParagraph
+cloudmersive-cli editDocumentDocxInsertParagraph
 ```
 
 ### Parameters
@@ -325,7 +325,7 @@ Adds a new table into a DOCX and returns the result
 
 ### Example
 ```bash
- editDocumentDocxInsertTable
+cloudmersive-cli editDocumentDocxInsertTable
 ```
 
 ### Parameters
@@ -357,7 +357,7 @@ Remove all headers, or footers, or both from a Word Document (DOCX)
 
 ### Example
 ```bash
- editDocumentDocxRemoveHeadersAndFooters
+cloudmersive-cli editDocumentDocxRemoveHeadersAndFooters
 ```
 
 ### Parameters
@@ -389,7 +389,7 @@ Delete any object, such as a paragraph, table, image, etc. from a Word Document 
 
 ### Example
 ```bash
- editDocumentDocxRemoveObject
+cloudmersive-cli editDocumentDocxRemoveObject
 ```
 
 ### Parameters
@@ -421,7 +421,7 @@ Replace all instances of a string in an Office Word Document (docx)
 
 ### Example
 ```bash
- editDocumentDocxReplace
+cloudmersive-cli editDocumentDocxReplace
 ```
 
 ### Parameters
@@ -453,7 +453,7 @@ Set the footer in a Word Document (DOCX)
 
 ### Example
 ```bash
- editDocumentDocxSetFooter
+cloudmersive-cli editDocumentDocxSetFooter
 ```
 
 ### Parameters
@@ -485,7 +485,7 @@ Set the header in a Word Document (DOCX)
 
 ### Example
 ```bash
- editDocumentDocxSetHeader
+cloudmersive-cli editDocumentDocxSetHeader
 ```
 
 ### Parameters
@@ -517,7 +517,7 @@ Once done editing a document, download the result.  Begin editing a document by 
 
 ### Example
 ```bash
- editDocumentFinishEditing
+cloudmersive-cli editDocumentFinishEditing
 ```
 
 ### Parameters
@@ -549,7 +549,7 @@ Replace all instances of a string in an Office PowerPoint Document (pptx)
 
 ### Example
 ```bash
- editDocumentPptxReplace
+cloudmersive-cli editDocumentPptxReplace
 ```
 
 ### Parameters
@@ -581,7 +581,7 @@ Returns the rows and cells defined in the Excel Spreadsheet worksheet
 
 ### Example
 ```bash
- editDocumentXlsxGetColumns
+cloudmersive-cli editDocumentXlsxGetColumns
 ```
 
 ### Parameters
@@ -613,7 +613,7 @@ Returns the images defined in the Excel Spreadsheet worksheet
 
 ### Example
 ```bash
- editDocumentXlsxGetImages
+cloudmersive-cli editDocumentXlsxGetImages
 ```
 
 ### Parameters
@@ -645,7 +645,7 @@ Returns the rows and cells defined in the Excel Spreadsheet worksheet
 
 ### Example
 ```bash
- editDocumentXlsxGetRowsAndCells
+cloudmersive-cli editDocumentXlsxGetRowsAndCells
 ```
 
 ### Parameters
@@ -677,7 +677,7 @@ Returns the style defined in the Excel Spreadsheet
 
 ### Example
 ```bash
- editDocumentXlsxGetStyles
+cloudmersive-cli editDocumentXlsxGetStyles
 ```
 
 ### Parameters
@@ -709,7 +709,7 @@ Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format fil
 
 ### Example
 ```bash
- editDocumentXlsxGetWorksheets
+cloudmersive-cli editDocumentXlsxGetWorksheets
 ```
 
 ### Parameters
@@ -741,7 +741,7 @@ Inserts a new worksheet into an Excel Spreadsheet
 
 ### Example
 ```bash
- editDocumentXlsxInsertWorksheet
+cloudmersive-cli editDocumentXlsxInsertWorksheet
 ```
 
 ### Parameters

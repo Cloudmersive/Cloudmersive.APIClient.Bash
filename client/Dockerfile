@@ -3,10 +3,10 @@ FROM ubuntu:16.10
 RUN apt-get update -y && apt-get full-upgrade -y
 RUN apt-get install -y bash-completion zsh curl cowsay git vim bsdmainutils
 
-ADD  /usr/bin/
-ADD _ /usr/local/share/zsh/site-functions/_
-ADD .bash-completion /etc/bash-completion.d/
-RUN chmod 755 /usr/bin/
+ADD cloudmersive-cli /usr/bin/cloudmersive-cli
+ADD _cloudmersive-cli /usr/local/share/zsh/site-functions/_cloudmersive-cli
+ADD cloudmersive-cli.bash-completion /etc/bash-completion.d/cloudmersive-cli
+RUN chmod 755 /usr/bin/cloudmersive-cli
 
 #
 # Install oh-my-zsh
@@ -18,7 +18,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh
 #
 RUN echo '\n\
 . /etc/bash_completion\n\
-source /etc/bash-completion.d/\n\
+source /etc/bash-completion.d/cloudmersive-cli\n\
 ' >> ~/.bashrc
 
 #
@@ -43,13 +43,13 @@ For convenience, you can export the following environment variables:\n\
 $(tput setaf 7)Basic usage:$(tput sgr0)\n\
 \n\
 $(tput setaf 3)Print the list of operations available on the service$(tput sgr0)\n\
-$  -h\n\
+$ cloudmersive-cli -h\n\
 \n\
 $(tput setaf 3)Print the service description$(tput sgr0)\n\
-$  --about\n\
+$ cloudmersive-cli --about\n\
 \n\
 $(tput setaf 3)Print detailed information about specific operation$(tput sgr0)\n\
-$  <operationId> -h\n\
+$ cloudmersive-cli <operationId> -h\n\
 \n\
 By default you are logged into Zsh with full autocompletion for your REST API,\n\
 but you can switch to Bash, where basic autocompletion is also supported.\n\

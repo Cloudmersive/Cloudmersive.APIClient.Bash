@@ -15,7 +15,7 @@ Creates an HTML embed code for a simple web-based viewer of a document; supports
 
 ### Example
 ```bash
- viewerToolsCreateSimple
+cloudmersive-cli viewerToolsCreateSimple
 ```
 
 ### Parameters

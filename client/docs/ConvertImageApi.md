@@ -17,7 +17,7 @@ Get details from an image such as size, format and MIME type, compression, EXIF 
 
 ### Example
 ```bash
- convertImageGetImageInfo
+cloudmersive-cli convertImageGetImageInfo
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ Convert between over 100 file formats, including key formats such as Photoshop (
 
 ### Example
 ```bash
- convertImageImageFormatConvert format1=value format2=value
+cloudmersive-cli convertImageImageFormatConvert format1=value format2=value
 ```
 
 ### Parameters
@@ -83,7 +83,7 @@ Resize an image to have a different DPI
 
 ### Example
 ```bash
- convertImageImageSetDPI dpi=value
+cloudmersive-cli convertImageImageSetDPI dpi=value
 ```
 
 ### Parameters

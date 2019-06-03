@@ -15,7 +15,7 @@ Compare two Office Word Documents (docx) files and highlight the differences
 
 ### Example
 ```bash
- compareDocumentDocx
+cloudmersive-cli compareDocumentDocx
 ```
 
 ### Parameters

@@ -17,7 +17,7 @@ Validate a Word document (DOCX); if the document is not valid, identifies the er
 
 ### Example
 ```bash
- validateDocumentDocxValidation
+cloudmersive-cli validateDocumentDocxValidation
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ Validate a PowerPoint presentation (PPTX); if the document is not valid, identif
 
 ### Example
 ```bash
- validateDocumentPptxValidation
+cloudmersive-cli validateDocumentPptxValidation
 ```
 
 ### Parameters
@@ -81,7 +81,7 @@ Validate a Excel document (XLSX); if the document is not valid, identifies the e
 
 ### Example
 ```bash
- validateDocumentXlsxValidation
+cloudmersive-cli validateDocumentXlsxValidation
 ```
 
 ### Parameters

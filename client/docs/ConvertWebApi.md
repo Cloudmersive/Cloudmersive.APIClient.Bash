@@ -19,7 +19,7 @@ Convert HTML to Office Word Document (DOCX) format
 
 ### Example
 ```bash
- convertWebHtmlToDocx
+cloudmersive-cli convertWebHtmlToDocx
 ```
 
 ### Parameters
@@ -51,7 +51,7 @@ Fully renders a website and returns a PDF of the HTML.  Javascript, HTML5, CSS a
 
 ### Example
 ```bash
- convertWebHtmlToPdf
+cloudmersive-cli convertWebHtmlToPdf
 ```
 
 ### Parameters
@@ -83,7 +83,7 @@ Convert a markdown file (.md) to HTML
 
 ### Example
 ```bash
- convertWebMdToHtml
+cloudmersive-cli convertWebMdToHtml
 ```
 
 ### Parameters
@@ -115,7 +115,7 @@ Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, 
 
 ### Example
 ```bash
- convertWebUrlToPdf
+cloudmersive-cli convertWebUrlToPdf
 ```
 
 ### Parameters
@@ -147,7 +147,7 @@ Fully renders a website and returns a PNG screenshot of the full page image.  Ja
 
 ### Example
 ```bash
- convertWebUrlToScreenshot
+cloudmersive-cli convertWebUrlToScreenshot
 ```
 
 ### Parameters

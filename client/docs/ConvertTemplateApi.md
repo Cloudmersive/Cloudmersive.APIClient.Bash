@@ -15,7 +15,7 @@ Apply operations to fill in an HTML template, generating a final HTML result
 
 ### Example
 ```bash
- convertTemplateApplyHtmlTemplate
+cloudmersive-cli convertTemplateApplyHtmlTemplate
 ```
 
 ### Parameters

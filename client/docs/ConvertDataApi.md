@@ -18,7 +18,7 @@ Convert a CSV file to a JSON object array
 
 ### Example
 ```bash
- convertDataCsvToJson
+cloudmersive-cli convertDataCsvToJson
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ Convert an Excel (97-2003) XLS file to a JSON object array
 
 ### Example
 ```bash
- convertDataXlsToJson
+cloudmersive-cli convertDataXlsToJson
 ```
 
 ### Parameters
@@ -82,7 +82,7 @@ Convert an Excel XLSX file to a JSON object array
 
 ### Example
 ```bash
- convertDataXlsxToJson
+cloudmersive-cli convertDataXlsxToJson
 ```
 
 ### Parameters
@@ -114,7 +114,7 @@ Convert an XML string or file into JSON
 
 ### Example
 ```bash
- convertDataXmlToJson
+cloudmersive-cli convertDataXmlToJson
 ```
 
 ### Parameters
