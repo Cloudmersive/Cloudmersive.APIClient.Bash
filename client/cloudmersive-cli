@@ -317,7 +317,7 @@ curl_arguments=""
 
 ##
 # The host for making the request
-host=""
+host="https://api.cloudmersive.com"
 
 ##
 # The user credentials for basic authentication
