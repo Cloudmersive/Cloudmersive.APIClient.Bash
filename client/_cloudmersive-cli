@@ -296,55 +296,219 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "compareDocumentDocx[Compare Two Word DOCX]"             "convertDataCsvToJson[CSV to JSON conversion]" \
-            "convertDataXlsToJson[Excel (97-2003) XLS to JSON conversion]" \
-            "convertDataXlsxToJson[Excel XLSX to JSON conversion]" \
-            "convertDataXmlToJson[XML to JSON conversion]"             "convertDocumentAutodetectGetInfo[Get document type information]" \
+            "compareDocumentDocx[Compare Two Word DOCX]"             "convertDataCsvToJson[Convert CSV to JSON conversion]" \
+            "convertDataJsonToXml[Convert JSON to XML conversion]" \
+            "convertDataXlsToJson[Convert Excel (97-2003) XLS to JSON conversion]" \
+            "convertDataXlsxToJson[Convert Excel XLSX to JSON conversion]" \
+            "convertDataXmlEditAddAttributeWithXPath[Adds an attribute to all XML nodes matching XPath expression]" \
+            "convertDataXmlEditAddChildWithXPath[Adds an XML node as a child to XML nodes matching XPath expression]" \
+            "convertDataXmlEditRemoveAllChildNodesWithXPath[Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes]" \
+            "convertDataXmlEditReplaceWithXPath[Replaces XML nodes matching XPath expression with new node]" \
+            "convertDataXmlEditSetValueWithXPath[Sets the value contents of XML nodes matching XPath expression]" \
+            "convertDataXmlFilterWithXPath[Filter, select XML nodes using XPath expression, get results]" \
+            "convertDataXmlQueryWithXQuery[Query an XML file using XQuery query, get results]" \
+            "convertDataXmlQueryWithXQueryMulti[Query multiple XML files using XQuery query, get results]" \
+            "convertDataXmlRemoveWithXPath[Remove, delete XML nodes and items matching XPath expression]" \
+            "convertDataXmlToJson[Convert XML to JSON conversion]" \
+            "convertDataXmlTransformWithXsltToXml[Transform XML document file with XSLT into a new XML document]"             "convertDocumentAutodetectGetInfo[Get document type information]" \
+            "convertDocumentAutodetectToJpg[Convert Document to JPG/JPEG image array]" \
             "convertDocumentAutodetectToPdf[Convert Document to PDF]" \
-            "convertDocumentCsvToXlsx[CSV to Excel XLSX]" \
-            "convertDocumentDocToDocx[Word DOC (97-03) to DOCX]" \
-            "convertDocumentDocToPdf[Word DOC (97-03) to PDF]" \
-            "convertDocumentDocxToPdf[Word DOCX to PDF]" \
-            "convertDocumentPdfToPngArray[PDF to PNG Array]" \
-            "convertDocumentPptToPdf[PowerPoint PPT (97-03) to PDF]" \
-            "convertDocumentPptToPptx[PowerPoint PPT (97-03) to PPTX]" \
-            "convertDocumentPptxToPdf[PowerPoint PPTX to PDF]" \
-            "convertDocumentXlsToPdf[Excel XLS (97-03) to PDF]" \
-            "convertDocumentXlsToXlsx[Excel XLS (97-03) to XLSX]" \
-            "convertDocumentXlsxToCsv[Excel XLSX to CSV]" \
-            "convertDocumentXlsxToPdf[Excel XLSX to PDF]"             "convertImageGetImageInfo[Get information about an image]" \
+            "convertDocumentAutodetectToPngArray[Convert Document to PNG array]" \
+            "convertDocumentAutodetectToThumbnail[Convert File to Thumbnail Image]" \
+            "convertDocumentAutodetectToThumbnailsAdvanced[Convert File to Thumbnail Image Object]" \
+            "convertDocumentAutodetectToTxt[Convert Document to Text (txt)]" \
+            "convertDocumentCsvToXlsx[Convert CSV to Excel XLSX Spreadsheet]" \
+            "convertDocumentDocToDocx[Convert Word DOC (97-03) Document to DOCX]" \
+            "convertDocumentDocToPdf[Convert Word DOC (97-03) Document to PDF]" \
+            "convertDocumentDocToTxt[Convert Word DOC (97-03) Document to Text (txt)]" \
+            "convertDocumentDocxToHtml[Convert Word DOCX Document to HTML Document]" \
+            "convertDocumentDocxToJpg[Convert Word DOCX Document to JPG/JPEG image array]" \
+            "convertDocumentDocxToPdf[Convert Word DOCX Document to PDF]" \
+            "convertDocumentDocxToPng[Convert Word DOCX Document to PNG image array]" \
+            "convertDocumentDocxToRtf[Convert Word DOCX Document to RTF]" \
+            "convertDocumentDocxToTxt[Convert Word DOCX Document to Text (txt)]" \
+            "convertDocumentEmlToHtml[Convert Email EML file to HTML string]" \
+            "convertDocumentEmlToJpg[Convert Email EML file to JPG/JPEG image array]" \
+            "convertDocumentEmlToPdf[Convert Email EML file to PDF document]" \
+            "convertDocumentEmlToPng[Convert Email EML file to PNG image array]" \
+            "convertDocumentGetFileTypeIcon[Get PNG icon file for the file extension]" \
+            "convertDocumentGetFileTypeIconAdvanced[Get PNG icon byte array for the file extension]" \
+            "convertDocumentHtmlToPdf[Convert HTML document file to PDF Document]" \
+            "convertDocumentHtmlToPng[Convert HTML document file to PNG image array]" \
+            "convertDocumentHtmlToTxt[HTML Document file to Text (txt)]" \
+            "convertDocumentKeynoteToJpg[Convert Keynote Presentation (KEY) to JPG/JPEG image array]" \
+            "convertDocumentKeynoteToPdf[Convert Keynote Presentation (KEY) to PDF]" \
+            "convertDocumentKeynoteToPng[Convert Keynote Presentation (KEY) to PNG image array]" \
+            "convertDocumentKeynoteToPptx[Convert Keynote Presentation (KEY) to PPTX]" \
+            "convertDocumentMsgToHtml[Convert Email MSG file to HTML string]" \
+            "convertDocumentMsgToJpg[Convert Email MSG file to JPG/JPEG image array]" \
+            "convertDocumentMsgToPdf[Convert Email MSG file to PDF document]" \
+            "convertDocumentMsgToPng[Convert Email MSG file to PNG image array]" \
+            "convertDocumentOdpToJpg[Convert ODP Presentation to JPG/JPEG image array]" \
+            "convertDocumentOdpToPdf[Convert ODP Presentation to PDF]" \
+            "convertDocumentOdpToPng[Convert ODP Presentation to PNG image array]" \
+            "convertDocumentOdpToPptx[Convert ODP Presentation to PPTX]" \
+            "convertDocumentOdsToJpg[Convert ODS Spreadsheet to JPG/JPEG image array]" \
+            "convertDocumentOdsToPdf[Convert ODS Spreadsheet to PDF]" \
+            "convertDocumentOdsToPng[Convert ODS Spreadsheet to PNG image array]" \
+            "convertDocumentOdsToXlsx[Convert ODS Spreadsheet to XLSX]" \
+            "convertDocumentOdtToDocx[Convert ODT Text File to Word DOCX]" \
+            "convertDocumentOdtToJpg[Convert ODT Text File to JPG/JPEG image array]" \
+            "convertDocumentOdtToPdf[Convert ODT Text File to PDF]" \
+            "convertDocumentOdtToPng[Convert ODT Text File to PNG image array]" \
+            "convertDocumentPdfToDocx[Convert PDF to Word DOCX Document]" \
+            "convertDocumentPdfToDocxRasterize[Convert PDF to Word DOCX Document based on rasterized version of the PDF]" \
+            "convertDocumentPdfToJpg[Convert PDF to JPG/JPEG image array]" \
+            "convertDocumentPdfToPngArray[Convert PDF to PNG Image Array]" \
+            "convertDocumentPdfToPngSingle[Convert PDF to Single PNG image]" \
+            "convertDocumentPdfToPptx[Convert PDF to PowerPoint PPTX Presentation]" \
+            "convertDocumentPdfToTxt[Convert PDF Document to Text (txt)]" \
+            "convertDocumentPngArrayToPdf[Convert PNG Array to PDF]" \
+            "convertDocumentPptToPdf[Convert PowerPoint PPT (97-03) Presentation to PDF]" \
+            "convertDocumentPptToPptx[Convert PowerPoint PPT (97-03) Presentation to PPTX]" \
+            "convertDocumentPptxToPdf[Convert PowerPoint PPTX Presentation to PDF]" \
+            "convertDocumentPptxToPng[Convert PowerPoint PPTX to PNG image array]" \
+            "convertDocumentPptxToTxt[Convert PowerPoint PPTX Presentation to Text (txt)]" \
+            "convertDocumentRtfToDocx[Convert Rich Text Format RTF to DOCX Document]" \
+            "convertDocumentRtfToHtml[Convert Rich Text Format RTF to HTML Document]" \
+            "convertDocumentRtfToJpg[Convert Rich Text Format RTF to JPG/JPEG image array]" \
+            "convertDocumentRtfToPdf[Convert Rich Text Format RTF to PDF]" \
+            "convertDocumentRtfToPng[Convert Rich Text Format RTF to PNG image array]" \
+            "convertDocumentXlsToCsv[Convert Excel XLS (97-03) Spreadsheet to CSV]" \
+            "convertDocumentXlsToPdf[Convert Excel XLS (97-03) Spreadsheet to PDF]" \
+            "convertDocumentXlsToXlsx[Convert Excel XLS (97-03) Spreadsheet to XLSX]" \
+            "convertDocumentXlsxToCsv[Convert Excel XLSX Spreadsheet to CSV, Single Worksheet]" \
+            "convertDocumentXlsxToCsvMulti[Convert Excel XLSX Spreadsheet to CSV, Multiple Worksheets]" \
+            "convertDocumentXlsxToPdf[Convert Excel XLSX Spreadsheet to PDF]" \
+            "convertDocumentXlsxToPng[Convert Excel XLSX spreadsheet to PNG image array]" \
+            "convertDocumentXlsxToTxt[Convert Excel XLSX Spreadsheet to Text (txt)]"             "convertImageGetImageInfo[Get information about an image]" \
             "convertImageImageFormatConvert[Image format conversion]" \
-            "convertImageImageSetDPI[Change image DPI]"             "convertTemplateApplyHtmlTemplate[Apply HTML template]"             "convertWebHtmlToDocx[HTML to DOCX]" \
+            "convertImageImageSetDPI[Change image DPI]" \
+            "convertImageMultipageImageFormatConvert[Multi-page image format conversion]"             "convertTemplateApplyDocxTemplate[Apply Word DOCX template]" \
+            "convertTemplateApplyHtmlTemplate[Apply HTML template]"             "convertWebHtmlToDocx[Convert HTML to Word DOCX Document]" \
             "convertWebHtmlToPdf[Convert HTML string to PDF]" \
+            "convertWebHtmlToPng[Convert HTML string to PNG screenshot]" \
+            "convertWebHtmlToTxt[Convert HTML string to text (txt)]" \
             "convertWebMdToHtml[Convert Markdown to HTML]" \
             "convertWebUrlToPdf[Convert a URL to PDF]" \
-            "convertWebUrlToScreenshot[Take screenshot of URL]"             "editDocumentBeginEditing[Begin editing a document]" \
-            "editDocumentDocxBody[Get body from a DOCX]" \
-            "editDocumentDocxGetHeadersAndFooters[Get content of a footer from a DOCX]" \
-            "editDocumentDocxGetImages[Get images from a DOCX]" \
-            "editDocumentDocxGetSections[Get sections from a DOCX]" \
-            "editDocumentDocxGetStyles[Get styles from a DOCX]" \
-            "editDocumentDocxGetTables[Get tables in DOCX]" \
-            "editDocumentDocxInsertImage[Insert image into a DOCX]" \
-            "editDocumentDocxInsertParagraph[Insert a new paragraph into a DOCX]" \
-            "editDocumentDocxInsertTable[Insert a new table into a DOCX]" \
-            "editDocumentDocxRemoveHeadersAndFooters[Remove headers and footers from DOCX]" \
-            "editDocumentDocxRemoveObject[Delete any object in a DOCX]" \
-            "editDocumentDocxReplace[Replace string in DOCX]" \
-            "editDocumentDocxSetFooter[Set the footer in a DOCX]" \
-            "editDocumentDocxSetHeader[Set the header in a DOCX]" \
-            "editDocumentFinishEditing[Download result from document editing]" \
-            "editDocumentPptxReplace[Replace string in PPTX]" \
-            "editDocumentXlsxGetColumns[Get rows and cells from a XLSX worksheet]" \
-            "editDocumentXlsxGetImages[Get images from a XLSX worksheet]" \
-            "editDocumentXlsxGetRowsAndCells[Get rows and cells from a XLSX worksheet]" \
-            "editDocumentXlsxGetStyles[Get styles from a XLSX worksheet]" \
-            "editDocumentXlsxGetWorksheets[Get worksheets from a XLSX]" \
-            "editDocumentXlsxInsertWorksheet[Insert a new worksheet into an XLSX spreadsheet]"             "mergeDocumentDocx[Merge Multple Word DOCX Together]" \
-            "mergeDocumentPptx[Merge Multple PowerPoint PPTX Together]" \
-            "mergeDocumentXlsx[Merge Multple Excel XLSX Together]"             "validateDocumentDocxValidation[Validate a Word document (DOCX)]" \
+            "convertWebUrlToScreenshot[Take screenshot of URL]" \
+            "convertWebUrlToTxt[Convert website URL page to text (txt)]"             "editDocumentBeginEditing[Begin editing a document]" \
+            "editDocumentDocxBody[Get body from a Word DOCX document]" \
+            "editDocumentDocxCreateBlankDocument[Create a blank Word DOCX document]" \
+            "editDocumentDocxDeletePages[Delete, remove pages from a Word DOCX document]" \
+            "editDocumentDocxDeleteTableRow[Deletes a table row in an existing table in a Word DOCX document]" \
+            "editDocumentDocxDeleteTableRowRange[Deletes a range of multiple table rows in an existing table in a Word DOCX document]" \
+            "editDocumentDocxFindParagraph[Find matching paragraphs in a Word DOCX document]" \
+            "editDocumentDocxGetComments[Get comments from a Word DOCX document as a flat list]" \
+            "editDocumentDocxGetCommentsHierarchical[Get comments from a Word DOCX document hierarchically]" \
+            "editDocumentDocxGetHeadersAndFooters[Get content of a footer from a Word DOCX document]" \
+            "editDocumentDocxGetImages[Get images from a Word DOCX document]" \
+            "editDocumentDocxGetSections[Get sections from a Word DOCX document]" \
+            "editDocumentDocxGetStyles[Get styles from a Word DOCX document]" \
+            "editDocumentDocxGetTableByIndex[Get a specific table by index in a Word DOCX document]" \
+            "editDocumentDocxGetTableRow[Gets the contents of an existing table row in an existing table in a Word DOCX document]" \
+            "editDocumentDocxGetTables[Get all tables in Word DOCX document]" \
+            "editDocumentDocxInsertCommentOnParagraph[Insert a new comment into a Word DOCX document attached to a paragraph]" \
+            "editDocumentDocxInsertImage[Insert image into a Word DOCX document]" \
+            "editDocumentDocxInsertParagraph[Insert a new paragraph into a Word DOCX document]" \
+            "editDocumentDocxInsertTable[Insert a new table into a Word DOCX document]" \
+            "editDocumentDocxInsertTableRow[Insert a new row into an existing table in a Word DOCX document]" \
+            "editDocumentDocxPages[Get pages and content from a Word DOCX document]" \
+            "editDocumentDocxRemoveHeadersAndFooters[Remove headers and footers from Word DOCX document]" \
+            "editDocumentDocxRemoveObject[Delete any object in a Word DOCX document]" \
+            "editDocumentDocxReplace[Replace string in Word DOCX document]" \
+            "editDocumentDocxReplaceParagraph[Replace matching paragraphs in a Word DOCX document]" \
+            "editDocumentDocxSetFooter[Set the footer in a Word DOCX document]" \
+            "editDocumentDocxSetFooterAddPageNumber[Add page number to footer in a Word DOCX document]" \
+            "editDocumentDocxSetHeader[Set the header in a Word DOCX document]" \
+            "editDocumentDocxUpdateTableCell[Update, set contents of a table cell in an existing table in a Word DOCX document]" \
+            "editDocumentDocxUpdateTableRow[Update, set contents of a table row in an existing table in a Word DOCX document]" \
+            "editDocumentFinishEditing[Finish editing document, and download result from document editing]" \
+            "editDocumentPptxDeleteSlides[Delete, remove slides from a PowerPoint PPTX presentation document]" \
+            "editDocumentPptxReplace[Replace string in PowerPoint PPTX presentation]" \
+            "editDocumentXlsxAppendRow[Append row to a Excel XLSX spreadsheet, worksheet]" \
+            "editDocumentXlsxClearCellByIndex[Clear cell contents in an Excel XLSX spreadsheet, worksheet by index]" \
+            "editDocumentXlsxClearRow[Clear row from a Excel XLSX spreadsheet, worksheet]" \
+            "editDocumentXlsxCreateBlankSpreadsheet[Create a blank Excel XLSX spreadsheet]" \
+            "editDocumentXlsxCreateSpreadsheetFromData[Create a new Excel XLSX spreadsheet from column and row data]" \
+            "editDocumentXlsxDeleteWorksheet[Delete, remove worksheet from an Excel XLSX spreadsheet document]" \
+            "editDocumentXlsxDisableSharedWorkbook[Disable Shared Workbook (legacy) in Excel XLSX spreadsheet]" \
+            "editDocumentXlsxEnableSharedWorkbook[Enable Shared Workbook (legacy) in Excel XLSX spreadsheet]" \
+            "editDocumentXlsxGetCellByIdentifier[Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier]" \
+            "editDocumentXlsxGetCellByIndex[Get cell from an Excel XLSX spreadsheet, worksheet by index]" \
+            "editDocumentXlsxGetColumns[Get columns from a Excel XLSX spreadsheet, worksheet]" \
+            "editDocumentXlsxGetImages[Get images from a Excel XLSX spreadsheet, worksheet]" \
+            "editDocumentXlsxGetRowsAndCells[Get rows and cells from a Excel XLSX spreadsheet, worksheet]" \
+            "editDocumentXlsxGetSpecificRow[Get a specific row from a Excel XLSX spreadsheet, worksheet by path]" \
+            "editDocumentXlsxGetStyles[Get styles from a Excel XLSX spreadsheet, worksheet]" \
+            "editDocumentXlsxGetWorksheets[Get worksheets from a Excel XLSX spreadsheet]" \
+            "editDocumentXlsxInsertWorksheet[Insert a new worksheet into an Excel XLSX spreadsheet]" \
+            "editDocumentXlsxRenameWorksheet[Rename a specific worksheet in a Excel XLSX spreadsheet]" \
+            "editDocumentXlsxSetCellByIdentifier[Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier]" \
+            "editDocumentXlsxSetCellByIndex[Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index]"             "editPdfAddAnnotations[Add one or more PDF annotations, comments in the PDF document]" \
+            "editPdfDecrypt[Decrypt and password-protect a PDF]" \
+            "editPdfDeletePages[Remove, delete pages from a PDF document]" \
+            "editPdfEncrypt[Encrypt and password-protect a PDF]" \
+            "editPdfGetAnnotations[Get PDF annotations, including comments in the document]" \
+            "editPdfGetFormFields[Gets PDF Form fields and values]" \
+            "editPdfGetMetadata[Get PDF document metadata]" \
+            "editPdfGetPdfTextByPages[Get text in a PDF document by page]" \
+            "editPdfInsertPages[Insert, copy pages from one PDF document into another]" \
+            "editPdfRasterize[Rasterize a PDF to an image-based PDF]" \
+            "editPdfRemoveAllAnnotations[Remove all PDF annotations, including comments in the document]" \
+            "editPdfRemoveAnnotationItem[Remove a specific PDF annotation, comment in the document]" \
+            "editPdfRotateAllPages[Rotate all pages in a PDF document]" \
+            "editPdfRotatePageRange[Rotate a range, subset of pages in a PDF document]" \
+            "editPdfSetFormFields[Sets ands fills PDF Form field values]" \
+            "editPdfSetMetadata[Sets PDF document metadata]" \
+            "editPdfSetPermissions[Encrypt, password-protect and set restricted permissions on a PDF]" \
+            "editPdfWatermarkText[Add a text watermark to a PDF]"             "editTextBase64Decode[Base 64 decode, convert base 64 string to binary content]" \
+            "editTextBase64Detect[Detect, check if text string is base 64 encoded]" \
+            "editTextBase64Encode[Base 64 encode, convert binary or file data to a text string]" \
+            "editTextChangeLineEndings[Set, change line endings of a text file]" \
+            "editTextDetectLineEndings[Detect line endings of a text file]" \
+            "editTextFindRegex[Find a regular expression regex in text input]" \
+            "editTextFindSimple[Find a string in text input]" \
+            "editTextRemoveAllWhitespace[Remove whitespace from text string]" \
+            "editTextRemoveHtml[Remove HTML from text string]" \
+            "editTextReplaceRegex[Replace a string in text with a regex regular expression string]" \
+            "editTextReplaceSimple[Replace a string in text with another string value]" \
+            "editTextTextEncodingDetect[Detect text encoding of file]" \
+            "editTextTrimWhitespace[Trim leading and trailing whitespace from text string]"             "mergeDocumentDocx[Merge Two Word DOCX Together]" \
+            "mergeDocumentDocxMulti[Merge Multple Word DOCX Together]" \
+            "mergeDocumentPdf[Merge Two PDF Files Together]" \
+            "mergeDocumentPdfMulti[Merge Multple PDF Files Together]" \
+            "mergeDocumentPng[Merge Two PNG Files Together]" \
+            "mergeDocumentPngMulti[Merge Multple PNG Files Together]" \
+            "mergeDocumentPptx[Merge Two PowerPoint PPTX Together]" \
+            "mergeDocumentPptxMulti[Merge Multple PowerPoint PPTX Together]" \
+            "mergeDocumentTxt[Merge Two Text (TXT) Files Together]" \
+            "mergeDocumentTxtMulti[Merge Multple Text (TXT) Files Together]" \
+            "mergeDocumentXlsx[Merge Two Excel XLSX Together]" \
+            "mergeDocumentXlsxMulti[Merge Multple Excel XLSX Together]"             "splitDocumentDocx[Split a single Word Document DOCX into Separate Documents by Page]" \
+            "splitDocumentPdfByPage[Split a PDF file into separate PDF files, one per page]" \
+            "splitDocumentPptx[Split a single PowerPoint Presentation PPTX into Separate Slides]" \
+            "splitDocumentTxtByLine[Split a single Text file (txt) into lines]" \
+            "splitDocumentTxtByString[Split a single Text file (txt) by a string delimiter]" \
+            "splitDocumentXlsx[Split a single Excel XLSX into Separate Worksheets]"             "validateDocumentAutodetectValidation[Autodetect content type and validate]" \
+            "validateDocumentCsvValidation[Validate a CSV file document (CSV)]" \
+            "validateDocumentDocxValidation[Validate a Word document (DOCX)]" \
+            "validateDocumentEmlValidation[Validate if an EML file is executable]" \
+            "validateDocumentExecutableValidation[Validate if a file is executable]" \
+            "validateDocumentGZipValidation[Validate a GZip Archive file (gzip or gz)]" \
+            "validateDocumentJsonValidation[Validate a JSON file]" \
+            "validateDocumentMsgValidation[Validate if an MSG file is executable]" \
+            "validateDocumentPdfValidation[Validate a PDF document file]" \
             "validateDocumentPptxValidation[Validate a PowerPoint presentation (PPTX)]" \
-            "validateDocumentXlsxValidation[Validate a Excel document (XLSX)]"             "viewerToolsCreateSimple[Create a web-based viewer]" 
+            "validateDocumentRarValidation[Validate a RAR Archive file (RAR)]" \
+            "validateDocumentTarValidation[Validate a TAR Tarball Archive file (TAR)]" \
+            "validateDocumentXlsxValidation[Validate a Excel document (XLSX)]" \
+            "validateDocumentXmlValidation[Validate an XML file]" \
+            "validateDocumentZipValidation[Validate a Zip Archive file (zip)]"             "viewerToolsCreateSimple[Create a web-based viewer]"             "zipArchiveZipCreate[Compress files to create a new zip archive]" \
+            "zipArchiveZipCreateAdvanced[Compress files and folders to create a new zip archive with advanced options]" \
+            "zipArchiveZipDecrypt[Decrypt and remove password protection on a zip file]" \
+            "zipArchiveZipEncryptAdvanced[Encrypt and password protect a zip file]" \
+            "zipArchiveZipExtract[Extract, decompress files and folders from a zip archive]" 
     _arguments "(--help)--help[Print information about operation]"
 
     ret=0
@@ -358,6 +522,13 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       convertDataCsvToJson)
+        local -a _op_arguments
+        _op_arguments=(
+                              "columnNamesFromFirstRow\::[HEADER] Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataJsonToXml)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -375,7 +546,81 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      convertDataXmlEditAddAttributeWithXPath)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XPathExpression\::[HEADER] Valid XML XPath query expression"
+"XmlAttributeName\::[HEADER] Name of the XML attribute to add"
+"XmlAttributeValue\::[HEADER] Value of the XML attribute to add"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlEditAddChildWithXPath)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XPathExpression\::[HEADER] Valid XML XPath query expression"
+"XmlNodeToAdd\::[HEADER] XML Node to add as a child"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlEditRemoveAllChildNodesWithXPath)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XPathExpression\::[HEADER] Valid XML XPath query expression"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlEditReplaceWithXPath)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XPathExpression\::[HEADER] Valid XML XPath query expression"
+"XmlNodeReplacement\::[HEADER] XML Node replacement content"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlEditSetValueWithXPath)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XPathExpression\::[HEADER] Valid XML XPath query expression"
+"XmlValue\::[HEADER] XML Value to set into the matching XML nodes"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlFilterWithXPath)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XPathExpression\::[HEADER] Valid XML XPath query expression"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlQueryWithXQuery)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XQuery\::[HEADER] Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlQueryWithXQueryMulti)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XQuery\::[HEADER] Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlRemoveWithXPath)
+        local -a _op_arguments
+        _op_arguments=(
+                              "XPathExpression\::[HEADER] Valid XML XPath query expression"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       convertDataXmlToJson)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDataXmlTransformWithXsltToXml)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -387,10 +632,49 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      convertDocumentAutodetectToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       convertDocumentAutodetectToPdf)
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentAutodetectToPngArray)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentAutodetectToThumbnail)
+        local -a _op_arguments
+        _op_arguments=(
+                              "maxWidth\::[HEADER] Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128."
+"maxHeight\::[HEADER] Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128."
+"extension\::[HEADER] Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentAutodetectToThumbnailsAdvanced)
+        local -a _op_arguments
+        _op_arguments=(
+                              "pages\::[HEADER] Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page."
+"maxWidth\::[HEADER] Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128."
+"maxHeight\::[HEADER] Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128."
+"extension\::[HEADER] Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentAutodetectToTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              "textFormattingMode\::[HEADER] Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;."
+)
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       convertDocumentCsvToXlsx)
@@ -411,13 +695,285 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      convertDocumentDocToTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentDocxToHtml)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentDocxToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       convertDocumentDocxToPdf)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      convertDocumentDocxToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentDocxToRtf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentDocxToTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              "textFormattingMode\::[HEADER] Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentEmlToHtml)
+        local -a _op_arguments
+        _op_arguments=(
+                              "bodyOnly\::[HEADER] Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false."
+"includeAttachments\::[HEADER] Optional; If false, the response object will not include any attachment files from the input file. Default is true."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentEmlToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentEmlToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              "bodyOnly\::[HEADER] Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentEmlToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentGetFileTypeIcon)
+        local -a _op_arguments
+        _op_arguments=(
+                              "fileExtension\::[HEADER] Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters."
+"iconSize\::[HEADER] Optional; The desired width of the icon, preserving its aspect ratio."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentGetFileTypeIconAdvanced)
+        local -a _op_arguments
+        _op_arguments=(
+                              "fileExtension\::[HEADER] Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters."
+"iconSize\::[HEADER] Optional; The desired width of the icon, preserving its aspect ratio."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentHtmlToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentHtmlToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentHtmlToTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentKeynoteToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentKeynoteToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentKeynoteToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentKeynoteToPptx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentMsgToHtml)
+        local -a _op_arguments
+        _op_arguments=(
+                              "bodyOnly\::[HEADER] Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false."
+"includeAttachments\::[HEADER] Optional; If false, the response object will not include any attachment files from the input file. Default is true."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentMsgToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentMsgToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              "bodyOnly\::[HEADER] Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentMsgToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdpToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdpToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdpToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdpToPptx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdsToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdsToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdsToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdsToXlsx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdtToDocx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdtToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdtToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentOdtToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPdfToDocx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPdfToDocxRasterize)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPdfToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       convertDocumentPdfToPngArray)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPdfToPngSingle)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPdfToPptx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPdfToTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              "textFormattingMode\::[HEADER] Optional; specify how whitespace should be handled when converting PDF to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPngArrayToPdf)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -441,6 +997,55 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      convertDocumentPptxToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentPptxToTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentRtfToDocx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentRtfToHtml)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentRtfToJpg)
+        local -a _op_arguments
+        _op_arguments=(
+                              "quality\::[HEADER] Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentRtfToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentRtfToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentXlsToCsv)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       convertDocumentXlsToPdf)
         local -a _op_arguments
         _op_arguments=(
@@ -456,10 +1061,30 @@ case $state in
       convertDocumentXlsxToCsv)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                              "outputEncoding\::[HEADER] Optional, set the output text encoding for the result; possible values are UTF-8, ASCII and UTF-32.  Default is UTF-8."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentXlsxToCsvMulti)
+        local -a _op_arguments
+        _op_arguments=(
+                              "outputEncoding\::[HEADER] Optional, set the output text encoding for the result; possible values are UTF-8, ASCII and UTF-32.  Default is UTF-8."
+)
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       convertDocumentXlsxToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentXlsxToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertDocumentXlsxToTxt)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -474,7 +1099,7 @@ case $state in
       convertImageImageFormatConvert)
         local -a _op_arguments
         _op_arguments=(
-          "format1=:[PATH] Input file format as a 3+ letter file extension.  Supported formats include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PDF, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV"
+          "format1=:[PATH] Input file format as a 3+ letter file extension.  You can also provide UNKNOWN for unknown file formats. Supported formats include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PDF, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV"
 "format2=:[PATH] Output (convert to this format) file format as a 3+ letter file extension.  Supported formats include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PDF, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -484,6 +1109,21 @@ case $state in
         _op_arguments=(
           "dpi=:[PATH] New DPI in pixels-per-inch, for example 300 DPI or 600 DPI"
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertImageMultipageImageFormatConvert)
+        local -a _op_arguments
+        _op_arguments=(
+          "format1=:[PATH] Input file format as a 3+ letter file extension.  You can also provide UNKNOWN for unknown file formats.  Supported formats include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PDF, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV"
+"format2=:[PATH] Output (convert to this format) file format as a 3+ letter file extension.  Supported formats include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PDF, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertTemplateApplyDocxTemplate)
+        local -a _op_arguments
+        _op_arguments=(
+                              "templateDefinition\::[HEADER] Template definition for the document, including what values to replace"
+)
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       convertTemplateApplyHtmlTemplate)
@@ -499,6 +1139,18 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       convertWebHtmlToPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertWebHtmlToPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      convertWebHtmlToTxt)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -522,6 +1174,12 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      convertWebUrlToTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       editDocumentBeginEditing)
         local -a _op_arguments
         _op_arguments=(
@@ -529,6 +1187,48 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       editDocumentDocxBody)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxCreateBlankDocument)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxDeletePages)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxDeleteTableRow)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxDeleteTableRowRange)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxFindParagraph)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxGetComments)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxGetCommentsHierarchical)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -558,7 +1258,25 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      editDocumentDocxGetTableByIndex)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxGetTableRow)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       editDocumentDocxGetTables)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxInsertCommentOnParagraph)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -582,6 +1300,18 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      editDocumentDocxInsertTableRow)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxPages)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       editDocumentDocxRemoveHeadersAndFooters)
         local -a _op_arguments
         _op_arguments=(
@@ -600,7 +1330,19 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      editDocumentDocxReplaceParagraph)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       editDocumentDocxSetFooter)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxSetFooterAddPageNumber)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -612,13 +1354,91 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      editDocumentDocxUpdateTableCell)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentDocxUpdateTableRow)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       editDocumentFinishEditing)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      editDocumentPptxDeleteSlides)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       editDocumentPptxReplace)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxAppendRow)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxClearCellByIndex)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxClearRow)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxCreateBlankSpreadsheet)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxCreateSpreadsheetFromData)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxDeleteWorksheet)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxDisableSharedWorkbook)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxEnableSharedWorkbook)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxGetCellByIdentifier)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxGetCellByIndex)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -642,6 +1462,12 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      editDocumentXlsxGetSpecificRow)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       editDocumentXlsxGetStyles)
         local -a _op_arguments
         _op_arguments=(
@@ -660,7 +1486,272 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      editDocumentXlsxRenameWorksheet)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxSetCellByIdentifier)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editDocumentXlsxSetCellByIndex)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfAddAnnotations)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfDecrypt)
+        local -a _op_arguments
+        _op_arguments=(
+                              "password\::[HEADER] Valid password for the PDF file"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfDeletePages)
+        local -a _op_arguments
+        _op_arguments=(
+                              "pageStart\::[HEADER] Page number (1 based) to start deleting pages from (inclusive)."
+"pageEnd\::[HEADER] Page number (1 based) to stop deleting pages from (inclusive)."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfEncrypt)
+        local -a _op_arguments
+        _op_arguments=(
+                              "userPassword\::[HEADER] Password of a user (reader) of the PDF file"
+"ownerPassword\::[HEADER] Password of a owner (creator/editor) of the PDF file"
+"encryptionKeyLength\::[HEADER] Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfGetAnnotations)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfGetFormFields)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfGetMetadata)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfGetPdfTextByPages)
+        local -a _op_arguments
+        _op_arguments=(
+                              "textFormattingMode\::[HEADER] Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfInsertPages)
+        local -a _op_arguments
+        _op_arguments=(
+                              "pageStartSource\::[HEADER] Page number (1 based) to start copying pages from (inclusive) in the Source file."
+"pageEndSource\::[HEADER] Page number (1 based) to stop copying pages pages from (inclusive) in the Source file."
+"pageInsertBeforeDesitnation\::[HEADER] Page number (1 based) to insert the pages before in the Destination file."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfRasterize)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfRemoveAllAnnotations)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfRemoveAnnotationItem)
+        local -a _op_arguments
+        _op_arguments=(
+                              "annotationIndex\::[HEADER] The 0-based index of the annotation in the document"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfRotateAllPages)
+        local -a _op_arguments
+        _op_arguments=(
+                              "rotationAngle\::[HEADER] The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfRotatePageRange)
+        local -a _op_arguments
+        _op_arguments=(
+                              "rotationAngle\::[HEADER] The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc."
+"pageStart\::[HEADER] Page number (1 based) to start rotating pages from (inclusive)."
+"pageEnd\::[HEADER] Page number (1 based) to stop rotating pages from (inclusive)."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfSetFormFields)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfSetMetadata)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfSetPermissions)
+        local -a _op_arguments
+        _op_arguments=(
+                              "ownerPassword\::[HEADER] Password of a owner (creator/editor) of the PDF file (required)"
+"userPassword\::[HEADER] Password of a user (reader) of the PDF file (optional)"
+"encryptionKeyLength\::[HEADER] Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256."
+"allowPrinting\::[HEADER] Set to false to disable printing through DRM.  Default is true."
+"allowDocumentAssembly\::[HEADER] Set to false to disable document assembly through DRM.  Default is true."
+"allowContentExtraction\::[HEADER] Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true."
+"allowFormFilling\::[HEADER] Set to false to disable filling out form fields in the PDF through DRM.  Default is true."
+"allowEditing\::[HEADER] Set to false to disable editing in the PDF through DRM (making the PDF read-only).  Default is true."
+"allowAnnotations\::[HEADER] Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true."
+"allowDegradedPrinting\::[HEADER] Set to false to disable degraded printing of the PDF through DRM.  Default is true."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editPdfWatermarkText)
+        local -a _op_arguments
+        _op_arguments=(
+                              "watermarkText\::[HEADER] Watermark text to add to the PDF (required)"
+"fontName\::[HEADER] Font Family Name for the watermark text; default is Times New Roman"
+"fontSize\::[HEADER] Font Size in points of the text; default is 150"
+"fontColor\::[HEADER] Font color in hexadecimal or HTML color name; default is Red"
+"fontTransparency\::[HEADER] Font transparency between 0.0 (completely transparent) to 1.0 (fully opaque); default is 0.5"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextBase64Decode)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextBase64Detect)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextBase64Encode)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextChangeLineEndings)
+        local -a _op_arguments
+        _op_arguments=(
+                              "lineEndingType\::[HEADER] Required; &#39;Windows&#39; will use carriage return and line feed, &#39;Unix&#39; will use newline, and &#39;Mac&#39; will use carriage return"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextDetectLineEndings)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextFindRegex)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextFindSimple)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextRemoveAllWhitespace)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextRemoveHtml)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextReplaceRegex)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextReplaceSimple)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextTextEncodingDetect)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      editTextTrimWhitespace)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       mergeDocumentDocx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentDocxMulti)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentPdf)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentPdfMulti)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentPng)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentPngMulti)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -672,7 +1763,85 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      mergeDocumentPptxMulti)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentTxt)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentTxtMulti)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       mergeDocumentXlsx)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      mergeDocumentXlsxMulti)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      splitDocumentDocx)
+        local -a _op_arguments
+        _op_arguments=(
+                              "returnDocumentContents\::[HEADER] Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      splitDocumentPdfByPage)
+        local -a _op_arguments
+        _op_arguments=(
+                              "returnDocumentContents\::[HEADER] Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      splitDocumentPptx)
+        local -a _op_arguments
+        _op_arguments=(
+                              "returnDocumentContents\::[HEADER] Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      splitDocumentTxtByLine)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      splitDocumentTxtByString)
+        local -a _op_arguments
+        _op_arguments=(
+                              "splitDelimiter\::[HEADER] Required; String to split up the input file on"
+"skipEmptyElements\::[HEADER] Optional; If true, empty elements will be skipped in the output"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      splitDocumentXlsx)
+        local -a _op_arguments
+        _op_arguments=(
+                              "returnDocumentContents\::[HEADER] Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true."
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentAutodetectValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentCsvValidation)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -684,7 +1853,55 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      validateDocumentEmlValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentExecutableValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentGZipValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentJsonValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentMsgValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentPdfValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       validateDocumentPptxValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentRarValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentTarValidation)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -696,7 +1913,50 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      validateDocumentXmlValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      validateDocumentZipValidation)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       viewerToolsCreateSimple)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      zipArchiveZipCreate)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      zipArchiveZipCreateAdvanced)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      zipArchiveZipDecrypt)
+        local -a _op_arguments
+        _op_arguments=(
+                              "zipPassword\::[HEADER] Required; Password for the input archive"
+)
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      zipArchiveZipEncryptAdvanced)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      zipArchiveZipExtract)
         local -a _op_arguments
         _op_arguments=(
                               )

@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **ImageToAdd** | [**DocxImage**](DocxImage.md) |  | [optional] [default to null]
 **InsertPlacement** | **string** |  | [optional] [default to null]
 **InsertPath** | **string** |  | [optional] [default to null]
+**WidthInEMUs** | **integer** |  | [optional] [default to null]
+**HeightInEMUs** | **integer** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

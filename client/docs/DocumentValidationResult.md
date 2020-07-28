@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DocumentIsValid** | **boolean** |  | [optional] [default to null]
+**PasswordProtected** | **boolean** |  | [optional] [default to null]
 **ErrorCount** | **integer** |  | [optional] [default to null]
 **WarningCount** | **integer** |  | [optional] [default to null]
 **ErrorsAndWarnings** | [**array[DocumentValidationError]**](DocumentValidationError.md) |  | [optional] [default to null]
